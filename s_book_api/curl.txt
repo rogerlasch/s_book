@@ -1,0 +1,17 @@
+curl -X POST -H "Content-Type: application/json" -d "{\"email\": \"rogerlasch@gmail.com\", \"username\": \"Roger\", \"password\": \"12345\"}" http://localhost:3000/api/user
+
+curl -X POST -H "Content-Type: application/json" -d "{\"email\": \"rogerlasch@gmail.com\", \"password\": \"12345\"}" http://localhost:3000/api/login
+
+//book
+
+curl -X POST -H "Content-Type: application/json" -d "{\"title\": \"Livro Teste\", \"author\": \"Autor Teste\", \"pages\": 200}" http://localhost:3000/api/book
+curl -X PUT -H "Content-Type: application/json" -d  "{\"title\": \"Livro Atualizado\", \"author\": \"Autor Atualizado\", \"pages\": 250}" http://localhost:3000/api/book/1
+
+curl -X GET http://localhost:3000/api/book/1
+curl -X GET http://localhost:3000/api/book
+
+curl -X DELETE http://localhost:3000/api/book/1
+
+-H "Authorization: Bearer $1"
+
+curl -X GET -H "Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJyb2dlcmxhc2NoQGdtYWlsLmNvbSIsImlhdCI6MTY5OTk3MTg1NywiZXhwIjoxNjk5OTc1NDU3fQ.IMwrvORB75bNyzSh1VGMpGSJEOzGnC6ht3Wpi1wDQDI" -H "Content-Type: application/json" http://localhost:3000/api/book/2
